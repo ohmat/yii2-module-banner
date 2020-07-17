@@ -16,7 +16,7 @@ use floor12\editmodal\EditModalAsset;
 use floor12\editmodal\EditModalHelper;
 use floor12\editmodal\IconHelper;
 use floor12\files\assets\LightboxAsset;
-use yii\bootstrap\BootstrapAsset;
+use yii\bootstrap4\BootstrapAsset;
 use yii\grid\GridView;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;

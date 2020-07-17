@@ -18,7 +18,7 @@ use yii\grid\GridView;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\widgets\Pjax;
-use yii\bootstrap\BootstrapAsset;
+use yii\bootstrap4\BootstrapAsset;
 use floor12\editmodal\EditModalAsset;
 
 BootstrapAsset::register($this);

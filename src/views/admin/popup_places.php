@@ -15,7 +15,7 @@ use floor12\editmodal\EditModalAsset;
 use floor12\editmodal\EditModalColumn;
 use floor12\editmodal\EditModalHelper;
 use floor12\editmodal\IconHelper;
-use yii\bootstrap\BootstrapAsset;
+use yii\bootstrap4\BootstrapAsset;
 use yii\grid\GridView;
 use yii\helpers\Html;
 use yii\widgets\Pjax;
@@ -32,9 +32,9 @@ echo Html::tag('h1', 'Баннеры');
 echo TabWidget::widget();
 
 echo EditModalHelper::editBtn(
-    'popup-place-form', 
-    0, 
-    'btn btn-sm btn-primary btn-banner-add', 
+    'popup-place-form',
+    0,
+    'btn btn-sm btn-primary btn-banner-add',
     IconHelper::PLUS . " добавить площадку"
 );
 
