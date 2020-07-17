@@ -17,7 +17,6 @@ use floor12\banner\assets\SlickAsset;
 use floor12\banner\models\AdsBanner;
 use yii\helpers\Html;
 use yii\web\View;
-use yii\helpers\Url;
 
 SlickAsset::register($this);
 

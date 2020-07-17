@@ -27,8 +27,8 @@ class AdsPopupQuery extends ActiveQuery
         $today = date('Y-m-d');
         return $this
             ->andWhere(['status' => AdsPopup::STATUS_ACTIVE])
-            ->andWhere(['OR', ['IS', 'show_start', NULL], ['<=', 'show_start', $today]])
-            ->andWhere(['OR', ['IS', 'show_end', NULL], ['>=', 'show_end', $today]]);
+            ->andWhere(['OR', 'ISNULL(show_start)', ['<=', 'show_start', $today]])
+            ->andWhere(['OR', 'ISNULL(show_end)', ['>=', 'show_end', $today]]);
     }
 
     /**

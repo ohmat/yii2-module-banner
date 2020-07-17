@@ -63,10 +63,7 @@ class AdsPopupPlace extends \yii\db\ActiveRecord
      */
     public function getPopupsActive(): AdsPopupQuery
     {
-        $orderByString = 'RAND()';
-        if (\Yii::$app->db->getDriverName() == 'pgsql')
-            $orderByString = 'random()';
-        return $this->getPopups()->orderBy($orderByString)->active();
+        return $this->getPopups()->orderBy('RAND()')->active();
     }
 
 }

@@ -3,7 +3,6 @@
 namespace floor12\banner\models;
 
 use yii\db\ActiveQuery;
-use yii\db\Expression;
 
 /**
  * This is the ActiveQuery class for [[Author]].
@@ -25,12 +24,11 @@ class AdsBannerQuery extends ActiveQuery
 
     public function active()
     {
-        $nullExpression = new Expression('null');
         $today = date('Y-m-d');
         return $this
             ->andWhere(['status' => AdsBanner::STATUS_ACTIVE])
-            ->andWhere(['OR', ['is', 'show_start', $nullExpression], ['<=', 'show_start', $today]])
-            ->andWhere(['OR', ['is', 'show_end', $nullExpression], ['>=', 'show_end', $today]]);
+            ->andWhere(['OR', 'ISNULL(show_start)', ['<=', 'show_start', $today]])
+            ->andWhere(['OR', 'ISNULL(show_end)', ['>=', 'show_end', $today]]);
     }
 
     /**

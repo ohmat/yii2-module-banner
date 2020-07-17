@@ -24,7 +24,7 @@ class BannerAsset extends AssetBundle
     ];
 
     public $depends = [
-       // 'yii\bootstrap4\BootstrapAsset',
+        'yii\bootstrap4\BootstrapAsset',
         'yii\web\JqueryAsset'
     ];
 }
