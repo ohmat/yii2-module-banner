@@ -27,6 +27,7 @@ class PopupWidget extends Widget
      */
     public function init(): bool
     {
+        parent::init();
         // Некоторые браузеры любят посылать HEAD запросы, что ошибочно увеличивает счетчик просмотров
         if (Yii::$app->request->method == 'HEAD')
             return false;

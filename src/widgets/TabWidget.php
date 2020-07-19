@@ -19,6 +19,7 @@ class TabWidget extends Widget
 
     public function init()
     {
+        parent::init();
         $this->items = [
             [
                 'name' => 'Баннеры',

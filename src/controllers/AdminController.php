@@ -58,13 +58,14 @@ class AdminController extends Controller
      */
     public function init()
     {
+        parent::init();
         $this->layout = Yii::$app->getModule('banner')->adminLayout;
     }
 
     /** Страница управления баннерами
      * @return string
      */
-    public function actionBanner(): string
+    public function actionBanner()
     {
         $model = new AdsBannerFilter();
         $model->load(Yii::$app->request->get());
@@ -75,7 +76,7 @@ class AdminController extends Controller
     /** Страница управления площадками
      * @return string
      */
-    public function actionPlace(): string
+    public function actionPlace()
     {
         $model = new AdsPlaceFilter();
         $model->load(Yii::$app->request->get());
@@ -86,7 +87,7 @@ class AdminController extends Controller
     /** Страница управления pop-up баннерами
      * @return string
      */
-    public function actionPopup(): string
+    public function actionPopup()
     {
         $model = new AdsPopupFilter();
         $model->load(Yii::$app->request->get());
@@ -97,7 +98,7 @@ class AdminController extends Controller
     /** Страница управления pop-up площадками
      * @return string
      */
-    public function actionPopPlace(): string
+    public function actionPopPlace()
     {
         $model = new AdsPopPlaceFilter();
         $model->load(Yii::$app->request->get());
@@ -109,7 +110,7 @@ class AdminController extends Controller
      *  Для обеспечения этого функционала используем пакет floor12\editmodal для редактирования в модальном окне
      * @return array
      */
-    public function actions(): array
+    public function actions()
     {
         return [
             // Формы
